@@ -1,16 +1,21 @@
 import { useState } from "react";
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle, CalendarIcon } from "lucide-react";
+import { format } from "date-fns";
+import { es } from "date-fns/locale";
 import { PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { toast } from "sonner";
 import { z } from "zod";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Ingresá tu nombre").max(80),
   phone: z.string().trim().min(6, "Ingresá un teléfono válido").max(30),
-  dates: z.string().trim().max(80).optional(),
+  checkIn: z.date().optional(),
+  checkOut: z.date().optional(),
   stay: z.string().trim().max(40),
   message: z.string().trim().max(600).optional(),
 });
@@ -18,10 +23,18 @@ const schema = z.object({
 const STAY_OPTIONS = ["Habitación de hotel", "Cabaña", "Camping", "Evento / grupo"];
 
 export function Contact() {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<{
+    name: string;
+    phone: string;
+    checkIn: Date | undefined;
+    checkOut: Date | undefined;
+    stay: string;
+    message: string;
+  }>({
     name: "",
     phone: "",
-    dates: "",
+    checkIn: undefined,
+    checkOut: undefined,
     stay: STAY_OPTIONS[0],
     message: "",
   });
@@ -34,10 +47,18 @@ export function Contact() {
       return;
     }
     const d = parsed.data;
+    const fmt = (date: Date) => format(date, "d 'de' MMMM", { locale: es });
+    const dateRange =
+      d.checkIn && d.checkOut
+        ? `Del ${fmt(d.checkIn)} al ${fmt(d.checkOut)}.`
+        : d.checkIn
+          ? `Desde el ${fmt(d.checkIn)}.`
+          : null;
+
     const text = [
       `¡Hola La Ponderosa! Soy ${d.name}.`,
       `Me interesa: ${d.stay}.`,
-      d.dates ? `Fechas: ${d.dates}.` : null,
+      dateRange,
       `Teléfono: ${d.phone}.`,
       d.message ? `Mensaje: ${d.message}` : null,
     ]
@@ -48,7 +69,7 @@ export function Contact() {
     toast.success("Abrimos WhatsApp con tu consulta lista para enviar");
   };
 
-  const set = (k: keyof typeof form) => (e: { target: { value: string } }) =>
+  const set = (k: "name" | "phone" | "stay" | "message") => (e: { target: { value: string } }) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
 
   return (
@@ -97,10 +118,58 @@ export function Contact() {
                 <Input id="phone" type="tel" value={form.phone} onChange={set("phone")} maxLength={30} required className="mt-1.5 bg-background" />
               </div>
               <div className="sm:col-span-1">
-                <Label htmlFor="dates">Fechas preferidas</Label>
-                <Input id="dates" placeholder="Ej: 10 al 14 de enero" value={form.dates} onChange={set("dates")} maxLength={80} className="mt-1.5 bg-background" />
+                <Label htmlFor="checkIn">Desde</Label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <button
+                      id="checkIn"
+                      type="button"
+                      className="mt-1.5 flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 text-left text-sm text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      <span className={form.checkIn ? "text-foreground" : "text-muted-foreground"}>
+                        {form.checkIn ? format(form.checkIn, "d MMM yyyy", { locale: es }) : "Elegir fecha"}
+                      </span>
+                      <CalendarIcon className="h-4 w-4 text-muted-foreground" />
+                    </button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align="start">
+                    <Calendar
+                      mode="single"
+                      selected={form.checkIn}
+                      onSelect={(date) => setForm((f) => ({ ...f, checkIn: date }))}
+                      disabled={{ before: new Date() }}
+                      locale={es}
+                    />
+                  </PopoverContent>
+                </Popover>
               </div>
               <div className="sm:col-span-1">
+                <Label htmlFor="checkOut">Hasta</Label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <button
+                      id="checkOut"
+                      type="button"
+                      className="mt-1.5 flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 text-left text-sm text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      <span className={form.checkOut ? "text-foreground" : "text-muted-foreground"}>
+                        {form.checkOut ? format(form.checkOut, "d MMM yyyy", { locale: es }) : "Elegir fecha"}
+                      </span>
+                      <CalendarIcon className="h-4 w-4 text-muted-foreground" />
+                    </button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align="start">
+                    <Calendar
+                      mode="single"
+                      selected={form.checkOut}
+                      onSelect={(date) => setForm((f) => ({ ...f, checkOut: date }))}
+                      disabled={{ before: form.checkIn ?? new Date() }}
+                      locale={es}
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+              <div className="sm:col-span-2">
                 <Label htmlFor="stay">Tipo de alojamiento</Label>
                 <select
                   id="stay"
