@@ -2,11 +2,11 @@ import { MapPin } from "lucide-react";
 import { ADDRESS } from "@/lib/site";
 
 const nearby = [
-  { name: "Playa Villa Los Robles", detail: "A pocos minutos, arena y médanos" },
-  { name: "Atlántida", detail: "Balneario histórico con servicios y gastronomía" },
-  { name: "Parque del Plata", detail: "Playas tranquilas y paseos entre pinos" },
-  { name: "Costa Serena", detail: "Todo el corredor costero de Costa Serena" },
-  { name: "El Águila", detail: "El ícono de la costa, a un paseo en auto" },
+  { name: "La playa cercana", detail: "A pocos minutos, arena y médanos" },
+  { name: "El balneario vecino", detail: "Servicios, comercios y gastronomía" },
+  { name: "Bosque de pinos", detail: "Playas tranquilas y paseos entre pinos" },
+  { name: "Corredor costero", detail: "Todo el litoral de la zona, en auto" },
+  { name: "Mirador del faro", detail: "Un clásico paseo de la costa" },
 ];
 
 export function Location() {
@@ -37,7 +37,7 @@ export function Location() {
           <div className="reveal overflow-hidden rounded-3xl shadow-lift">
             <iframe
               title="Mapa de El Refugio Verde en Villa Los Robles, Costa Serena"
-              src="https://www.google.com/maps?q=66H3%2BF8R%20Fort%C3%ADn%20de%20Santa%20Rosa%20Costa Serena%20Uruguay&output=embed"
+              src="https://www.google.com/maps?q=Villa%20Los%20Robles%20Uruguay&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="h-[380px] w-full border-0 lg:h-full lg:min-h-[460px]"
