@@ -87,6 +87,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "La Ponderosa" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "La Ponderosa · Hotel, cabañas y camping en Canelones" },
+      { name: "twitter:title", content: "La Ponderosa · Hotel, cabañas y camping en Canelones" },
+      { property: "og:description", content: "Hotel, cabañas y camping en Fortín de Santa Rosa, Canelones. Piscina, espacios verdes y a minutos de la playa." },
+      { name: "twitter:description", content: "Hotel, cabañas y camping en Fortín de Santa Rosa, Canelones. Piscina, espacios verdes y a minutos de la playa." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/60a2cd8b-ea09-49d3-a1f8-ecb34639d4a9/id-preview-5d6aa616--f0c04af7-5da2-4546-a48e-663ebf176732.lovable.app-1785639500274.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/60a2cd8b-ea09-49d3-a1f8-ecb34639d4a9/id-preview-5d6aa616--f0c04af7-5da2-4546-a48e-663ebf176732.lovable.app-1785639500274.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
