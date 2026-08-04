@@ -3,7 +3,7 @@ import { whatsappLink } from "@/lib/site";
 export function FloatingWhatsApp() {
   return (
     <a
-      href={whatsappLink("¡Hola La Ponderosa! Quisiera información sobre alojamiento y disponibilidad.")}
+      href={whatsappLink("¡Hola El Refugio Verde! Quisiera información sobre alojamiento y disponibilidad.")}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Escribinos por WhatsApp"

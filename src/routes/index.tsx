@@ -15,9 +15,9 @@ import { Footer } from "@/components/site/Footer";
 import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { ADDRESS, PHONE_TEL } from "@/lib/site";
 
-const TITLE = "La Ponderosa | Hotel, cabañas y camping en Fortín de Santa Rosa";
+const TITLE = "El Refugio Verde | Hotel, cabañas y camping en Villa Los Robles";
 const DESCRIPTION =
-  "Hotel, cabañas y camping en Fortín de Santa Rosa, Canelones. Piscina, amplios espacios verdes y a minutos de la playa. Ideal para familias y grupos. Reservá por WhatsApp.";
+  "Hotel, cabañas y camping en Villa Los Robles, Costa Serena. Piscina, amplios espacios verdes y a minutos de la playa. Ideal para familias y grupos. Reservá por WhatsApp.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "hotel en Fortín de Santa Rosa, hotel Canelones, camping Canelones, alojamiento Costa de Oro, hotel con piscina Uruguay, cabañas Canelones, vacaciones Costa de Oro, hotel cerca de Atlántida",
+          "hotel en Villa Los Robles, hotel Costa Serena, camping Costa Serena, alojamiento Costa Serena, hotel con piscina Uruguay, cabañas Costa Serena, vacaciones Costa Serena",
       },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
@@ -44,14 +44,14 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Resort",
-          name: "La Ponderosa",
+          name: "El Refugio Verde",
           description: DESCRIPTION,
           telephone: PHONE_TEL,
           address: {
             "@type": "PostalAddress",
             streetAddress: ADDRESS,
-            addressLocality: "Fortín de Santa Rosa",
-            addressRegion: "Canelones",
+            addressLocality: "Villa Los Robles",
+            addressRegion: "Costa Serena",
             addressCountry: "UY",
           },
           amenityFeature: [

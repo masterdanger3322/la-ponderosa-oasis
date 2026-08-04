@@ -41,7 +41,7 @@ export function Nav() {
                 scrolled ? "text-primary" : "text-background",
               )}
             >
-              La Ponderosa
+              El Refugio Verde
             </span>
             <span
               className={cn(
@@ -49,7 +49,7 @@ export function Nav() {
                 scrolled ? "text-muted-foreground" : "text-background/80",
               )}
             >
-              Fortín de Santa Rosa
+              Villa Los Robles
             </span>
           </span>
         </a>

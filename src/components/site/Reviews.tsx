@@ -1,12 +1,12 @@
 import { Star } from "lucide-react";
 
 const REVIEWS = [
-  { name: "Familia Rodríguez", text: "Espacios verdes hermosos y muy bien cuidados. Los chiquilines jugaron todo el día y nosotros descansamos como hacía años.", stars: 5 },
-  { name: "Martín P.", text: "Lugar ideal para relajarse. Silencio, árboles enormes y la playa a pocos minutos en auto.", stars: 5 },
-  { name: "Carolina S.", text: "La piscina está muy linda y limpia. Perfecto para venir en familia un fin de semana largo.", stars: 4 },
-  { name: "Grupo de amigos, Montevideo", text: "Acampamos tres noches y la pasamos bárbaro. Buenos parrilleros, baños limpios y mucho lugar.", stars: 5 },
-  { name: "Verónica y Diego", text: "Ambiente tranquilo y gente muy amable. Se nota que atienden con cariño el lugar.", stars: 4 },
-  { name: "Fernando A.", text: "Excelente experiencia de camping en la Costa de Oro. Volvemos seguro el próximo verano.", stars: 5 },
+  { name: "Familia Pérez", text: "Espacios verdes hermosos y muy bien cuidados. Los chiquilines jugaron todo el día y nosotros descansamos como hacía años.", stars: 5 },
+  { name: "Julián M.", text: "Lugar ideal para relajarse. Silencio, árboles enormes y la playa a pocos minutos en auto.", stars: 5 },
+  { name: "Lucía T.", text: "La piscina está muy linda y limpia. Perfecto para venir en familia un fin de semana largo.", stars: 4 },
+  { name: "Grupo de amigos", text: "Acampamos tres noches y la pasamos bárbaro. Buenos parrilleros, baños limpios y mucho lugar.", stars: 5 },
+  { name: "Ana y Pablo", text: "Ambiente tranquilo y gente muy amable. Se nota que atienden con cariño el lugar.", stars: 4 },
+  { name: "Sebastián R.", text: "Excelente experiencia de camping en la zona costera. Volvemos seguro el próximo verano.", stars: 5 },
 ];
 
 function Stars({ n }: { n: number }) {
