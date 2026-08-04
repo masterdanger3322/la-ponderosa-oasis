@@ -11,7 +11,7 @@ import {
 export const FAQS = [
   {
     q: "¿Cómo reservo y cuánta seña se paga?",
-    a: "Las reservas se realizan por WhatsApp al +598 98 884 160. Para confirmar se solicita una seña del 30% del total por transferencia o depósito; el saldo se abona al llegar.",
+    a: "Las reservas se realizan por WhatsApp al +598 99 456 780. Para confirmar se solicita una seña del 30% del total por transferencia o depósito; el saldo se abona al llegar.",
   },
   {
     q: "¿Se admiten mascotas?",

@@ -7,10 +7,10 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="font-display text-2xl">La Ponderosa</p>
+            <p className="font-display text-2xl">El Refugio Verde</p>
             <p className="mt-3 max-w-xs text-sm text-primary-foreground/75">
-              Hotel, cabañas y camping entre grandes espacios verdes en Fortín de Santa Rosa,
-              Canelones, a minutos de la playa.
+              Hotel, cabañas y camping entre grandes espacios verdes en Villa Los Robles,
+              Costa Serena, a minutos de la playa.
             </p>
             <div className="mt-5 flex gap-3">
               <a
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         <p className="mt-12 border-t border-background/15 pt-6 text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} La Ponderosa · Fortín de Santa Rosa, Canelones, Uruguay.
+          © {new Date().getFullYear()} El Refugio Verde · Villa Los Robles, Costa Serena, Uruguay.
         </p>
       </div>
     </footer>

@@ -50,7 +50,7 @@ const stays: Stay[] = [
     title: "Camping",
     capacity: "Carpas y motorhome",
     description:
-      "Parcelas amplias bajo los pinos, con sombra todo el día y el ambiente tranquilo de siempre. La forma más libre de vivir la Costa de Oro.",
+      "Parcelas amplias bajo los pinos, con sombra todo el día y el ambiente tranquilo de siempre. La forma más libre de vivir la Costa Serena.",
     features: ["Parrilleros", "Baños y duchas con agua caliente", "Piletas de lavar", "Tomas de luz", "Acceso a piscina y áreas recreativas"],
     gallery: [
       { src: campingImg, alt: "Zona de camping con carpas bajo los pinos" },

@@ -6,7 +6,7 @@ const REVIEWS = [
   { name: "Carolina S.", text: "La piscina está muy linda y limpia. Perfecto para venir en familia un fin de semana largo.", stars: 4 },
   { name: "Grupo de amigos, Montevideo", text: "Acampamos tres noches y la pasamos bárbaro. Buenos parrilleros, baños limpios y mucho lugar.", stars: 5 },
   { name: "Verónica y Diego", text: "Ambiente tranquilo y gente muy amable. Se nota que atienden con cariño el lugar.", stars: 4 },
-  { name: "Fernando A.", text: "Excelente experiencia de camping en la Costa de Oro. Volvemos seguro el próximo verano.", stars: 5 },
+  { name: "Fernando A.", text: "Excelente experiencia de camping en la Costa Serena. Volvemos seguro el próximo verano.", stars: 5 },
 ];
 
 function Stars({ n }: { n: number }) {

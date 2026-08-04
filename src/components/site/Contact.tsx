@@ -56,7 +56,7 @@ export function Contact() {
           : null;
 
     const text = [
-      `¡Hola La Ponderosa! Soy ${d.name}.`,
+      `¡Hola El Refugio Verde! Soy ${d.name}.`,
       `Me interesa: ${d.stay}.`,
       dateRange,
       `Teléfono: ${d.phone}.`,
@@ -88,7 +88,7 @@ export function Contact() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href={whatsappLink("¡Hola La Ponderosa! Quisiera consultar disponibilidad.")}
+                href={whatsappLink("¡Hola El Refugio Verde! Quisiera consultar disponibilidad.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-deep"

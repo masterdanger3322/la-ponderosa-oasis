@@ -12,7 +12,7 @@ const pillars = [
   { icon: Trees, title: "Espacios verdes enormes", text: "Parque arbolado con sombra natural, lugar para jugar, descansar y respirar." },
   { icon: Home, title: "Hotel + cabañas + camping", text: "Una combinación poco común: cada grupo elige cómo quiere vivir sus vacaciones." },
   { icon: Waves, title: "Piscina al aire libre", text: "Piscina rodeada de verde y reposeras, el punto de encuentro del verano." },
-  { icon: Sparkles, title: "A pasos del mar", text: "Playa Fortín de Santa Rosa a pocos minutos, en plena Costa de Oro." },
+  { icon: Sparkles, title: "A pasos del mar", text: "Playa Villa Los Robles a pocos minutos, en plena Costa Serena." },
 ];
 
 export function About() {
@@ -26,7 +26,7 @@ export function About() {
               Un refugio familiar entre árboles, desde hace generaciones
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              La Ponderosa nació como un campo de descanso en Fortín de Santa Rosa y con los años
+              El Refugio Verde nació como un campo de descanso en Villa Los Robles y con los años
               se transformó en un complejo turístico donde conviven el hotel, las cabañas y el
               camping, siempre con el mismo espíritu: tranquilidad, naturaleza y trato cercano.
             </p>
@@ -51,7 +51,7 @@ export function About() {
           <div className="reveal relative">
             <img
               src={greenImg}
-              alt="Amplios espacios verdes con árboles y juegos para niños en La Ponderosa"
+              alt="Amplios espacios verdes con árboles y juegos para niños en El Refugio Verde"
               width={1200}
               height={900}
               loading="lazy"
@@ -60,7 +60,7 @@ export function About() {
             />
             <div className="absolute -bottom-6 left-6 hidden rounded-2xl bg-sand px-6 py-4 shadow-soft sm:block">
               <p className="font-display text-xl text-primary">Paz, verde y mar</p>
-              <p className="text-xs text-secondary-foreground">Costa de Oro, Canelones</p>
+              <p className="text-xs text-secondary-foreground">Costa Serena, Costa Serena</p>
             </div>
           </div>
         </div>

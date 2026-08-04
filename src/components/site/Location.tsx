@@ -2,10 +2,10 @@ import { MapPin } from "lucide-react";
 import { ADDRESS } from "@/lib/site";
 
 const nearby = [
-  { name: "Playa Fortín de Santa Rosa", detail: "A pocos minutos, arena y médanos" },
+  { name: "Playa Villa Los Robles", detail: "A pocos minutos, arena y médanos" },
   { name: "Atlántida", detail: "Balneario histórico con servicios y gastronomía" },
   { name: "Parque del Plata", detail: "Playas tranquilas y paseos entre pinos" },
-  { name: "Costa de Oro", detail: "Todo el corredor costero de Canelones" },
+  { name: "Costa Serena", detail: "Todo el corredor costero de Costa Serena" },
   { name: "El Águila", detail: "El ícono de la costa, a un paseo en auto" },
 ];
 
@@ -17,7 +17,7 @@ export function Location() {
           <div className="reveal">
             <p className="text-[11px] uppercase tracking-[0.28em] text-accent-deep">Ubicación</p>
             <h2 className="mt-3 font-display text-3xl leading-tight text-primary sm:text-4xl">
-              En Fortín de Santa Rosa, corazón de la Costa de Oro
+              En Villa Los Robles, corazón de la Costa Serena
             </h2>
             <p className="mt-4 inline-flex items-start gap-2 text-sm text-muted-foreground">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-deep" />
@@ -36,8 +36,8 @@ export function Location() {
 
           <div className="reveal overflow-hidden rounded-3xl shadow-lift">
             <iframe
-              title="Mapa de La Ponderosa en Fortín de Santa Rosa, Canelones"
-              src="https://www.google.com/maps?q=66H3%2BF8R%20Fort%C3%ADn%20de%20Santa%20Rosa%20Canelones%20Uruguay&output=embed"
+              title="Mapa de El Refugio Verde en Villa Los Robles, Costa Serena"
+              src="https://www.google.com/maps?q=66H3%2BF8R%20Fort%C3%ADn%20de%20Santa%20Rosa%20Costa Serena%20Uruguay&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="h-[380px] w-full border-0 lg:h-full lg:min-h-[460px]"

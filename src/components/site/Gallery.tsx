@@ -44,7 +44,7 @@ export function Gallery() {
         <div className="reveal max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.28em] text-accent-deep">Galería</p>
           <h2 className="mt-3 font-display text-3xl leading-tight text-primary sm:text-4xl">
-            Así se vive La Ponderosa
+            Así se vive El Refugio Verde
           </h2>
         </div>
 
