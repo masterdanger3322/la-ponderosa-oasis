@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "hotel en Villa Los Robles, hotel Costa Serena, camping Costa Serena, alojamiento Costa Serena, hotel con piscina Uruguay, cabañas Costa Serena, vacaciones Costa Serena, hotel cerca de Atlántida",
+          "hotel en Villa Los Robles, hotel Costa Serena, camping Costa Serena, alojamiento Costa Serena, hotel con piscina Uruguay, cabañas Costa Serena, vacaciones Costa Serena",
       },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },

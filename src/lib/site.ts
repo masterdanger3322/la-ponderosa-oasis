@@ -44,4 +44,4 @@ export const NAV_LINKS = [
   { href: "#contacto", label: "Contacto" },
 ];
 
-export const ADDRESS = "66H3+F8R, Villa Los Robles, Costa Serena, Uruguay";
+export const ADDRESS = "48X7+R5M, Villa Los Robles, Costa Serena, Uruguay";

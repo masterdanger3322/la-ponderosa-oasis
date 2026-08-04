@@ -12,7 +12,7 @@ const pillars = [
   { icon: Trees, title: "Espacios verdes enormes", text: "Parque arbolado con sombra natural, lugar para jugar, descansar y respirar." },
   { icon: Home, title: "Hotel + cabañas + camping", text: "Una combinación poco común: cada grupo elige cómo quiere vivir sus vacaciones." },
   { icon: Waves, title: "Piscina al aire libre", text: "Piscina rodeada de verde y reposeras, el punto de encuentro del verano." },
-  { icon: Sparkles, title: "A pasos del mar", text: "Playa Villa Los Robles a pocos minutos, en plena Costa Serena." },
+  { icon: Sparkles, title: "A pasos del mar", text: "La playa cercana a pocos minutos, en plena zona costera." },
 ];
 
 export function About() {

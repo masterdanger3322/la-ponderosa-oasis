@@ -14,7 +14,7 @@ export function Footer() {
             </p>
             <div className="mt-5 flex gap-3">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/elrefugioverde"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -23,7 +23,7 @@ export function Footer() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://facebook.com/elrefugioverde"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
