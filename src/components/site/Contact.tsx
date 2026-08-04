@@ -20,7 +20,7 @@ const schema = z.object({
   message: z.string().trim().max(600).optional(),
 });
 
-const STAY_OPTIONS = ["Habitación de hotel", "Cabaña", "Camping", "Evento / grupo"];
+const STAY_OPTIONS = ["Habitación de hotel", "Cabaña", "Camping", "Evento / grupo"] as const;
 
 export function Contact() {
   const [form, setForm] = useState<{
@@ -35,7 +35,7 @@ export function Contact() {
     phone: "",
     checkIn: undefined,
     checkOut: undefined,
-    stay: STAY_OPTIONS[0],
+    stay: STAY_OPTIONS[0] as string,
     message: "",
   });
 
